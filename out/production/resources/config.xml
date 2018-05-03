@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <configuration>
+        <path>d:/test1</path>
+        <fileMinSize>10000</fileMinSize>
+        <scope>篇名</scope>
+        <keyIndex>2</keyIndex>
+        <pageIndex>1</pageIndex>
+    </configuration>
+    <strategies>
+        <strategy class="com.hone.zhiwang.strategy.RandomStrategy"/>
+        <!--<strategy class="com.hone.zhiwang.strategy.RandomStrategy"/>-->
+        <strategy class="com.hone.zhiwang.strategy.SessionChangeStrategy"/>
+    </strategies>
+    <storeAdapters>
+        <storeAdapter class="com.hone.zhiwang.keys.FileAdapter"/>
+    </storeAdapters>
+    <dataSource class="com.hone.zhiwang.db.MysqlHelper">
+        <url>jdbc:mysql://localhost:3306/pachong</url>
+        <name>com.mysql.jdbc.Driver</name>
+        <user>root</user>
+        <password>123</password>
+    </dataSource>
+    <downloadHandlerFactory class="com.hone.zhiwang.download.DefaultDownloadHandlerFactory"/>
+</root>
